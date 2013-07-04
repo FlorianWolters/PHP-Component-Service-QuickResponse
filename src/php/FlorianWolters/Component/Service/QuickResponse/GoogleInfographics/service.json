@@ -1,0 +1,47 @@
+{
+    "name": "Google Infographics",
+    "apiVersion": "2011-07-20",
+    "baseUrl": "https://chart.googleapis.com",
+    "description": "Google chart tools infographics are static PNG images that you can customize with a single URL request.",
+    "operations": {
+        "GetQrCode": {
+            "httpMethod": "GET",
+            "uri": "chart",
+            "parameters": {
+                "cht": {
+                    "location": "query",
+                    "type": "string",
+                    "default": "qr"
+                },
+                "chl": {
+                    "location": "query",
+                    "description": "The data to encode. Must be URL-encoded.",
+                    "type": "string",
+                    "required": true,
+                    "minLength": 1
+                },
+                "chs": {
+                    "location": "query",
+                    "description": "The size of the image in pixels, in the format <width>x<height>.",
+                    "type": "string",
+                    "required": true,
+                    "pattern": "/^\\d{2,4}x\\d{2,4}$/"
+                },
+                "choe": {
+                    "location": "query",
+                    "description": "The encoding of the data in the image.",
+                    "type": "string",
+                    "required": false,
+                    "enum": ["UTF-8", "Shift_JIS", "ISO-8859-1"]
+                },
+                "chld": {
+                    "location": "query",
+                    "description": "The Error Correction (EC) level and margin of the image.",
+                    "type": "string",
+                    "required": false,
+                    "pattern": "/^[L|M|Q|H](?:\\|\\d{1,4})$/"
+                }
+            }
+        }
+    }
+}

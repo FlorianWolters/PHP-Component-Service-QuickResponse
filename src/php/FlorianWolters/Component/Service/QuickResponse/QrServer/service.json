@@ -1,0 +1,77 @@
+{
+    "name": "QR-Code-API",
+    "apiVersion": "1",
+    "baseUrl": "http://api.qrserver.com/v1/",
+    "description": "QR-Code-API allows to create Quick Response (QR) codes.",
+    "operations": {
+        "GetQrCode": {
+            "httpMethod": "GET",
+            "uri": "create-qr-code/",
+            "summary": "Creates a Quick Response (QR) code graphic.",
+            "parameters": {
+                "data": {
+                    "location": "query",
+                    "description": "The data to encode in the QR code graphic to create. Must be URL-encoded.",
+                    "type": "string",
+                    "required": true,
+                    "minLength": 1,
+                    "pattern": "/^[[:ascii:]]+$/"
+                },
+                "size": {
+                    "location": "query",
+                    "description": "The size of the QR code graphic to create.",
+                    "type": "string",
+                    "pattern": "/^\\d{2,4}x\\d{2,4}$/"
+                },
+                "charset-source": {
+                    "location": "query",
+                    "description": "The character encoding of the data parameter.",
+                    "type": "string",
+                    "enum": ["ISO-8859-1", "UTF-8"]
+                },
+                "charset-target": {
+                    "location": "query",
+                    "description": "The character encoding of the data in the QR code to create.",
+                    "type": "string",
+                    "enum": ["ISO-8859-1", "UTF-8"]
+                },
+                "ecc": {
+                    "location": "query",
+                    "description": "The Error Correction (EC) level of the QR code to create.",
+                    "type": "string",
+                    "enum": ["L", "M", "Q", "H"]
+                },
+                "color": {
+                    "location": "query",
+                    "description": "The data color (in RGB format) of the QR code to create.",
+                    "type": "string"
+                },
+                "bgcolor": {
+                    "location": "query",
+                    "description": "The background color (in RGB format) of the QR code to create.",
+                    "type": "string"
+                },
+                "margin": {
+                    "location": "query",
+                    "description": "The width of the margin (in pixels) of the QR code to create.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 50
+                },
+                "qzone": {
+                    "location": "query",
+                    "description": "The width of the margin (quiet zone) of the QR code to create.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "format": {
+                    "location": "query",
+                    "description": "The image file format of the QR code to create.",
+                    "type": "string",
+                    "enum": ["png", "gif", "jpeg"]
+                }
+            }
+        }
+    }
+}

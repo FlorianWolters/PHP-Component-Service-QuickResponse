@@ -1,0 +1,33 @@
+{
+    "name": "florianwolters/component-service-quickresponse",
+    "description": "Web service clients to create Quick Response (QR) codes as a PHP component.",
+    "type": "library",
+    "keywords": ["quick response", "qr", "qr code", "web service client", "web service", "api"],
+    "homepage": "http://github.com/FlorianWolters/PHP-Component-Service-QuickResponse",
+    "license": "LGPL-3.0+",
+    "authors": [
+      {
+        "name": "Florian Wolters",
+        "email": "wolters.fl@gmail.com",
+        "homepage": "http://blog.florianwolters.de",
+        "role": "Developer"
+      }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "guzzle/guzzle": ">=3.7",
+        "florianwolters/component-core-enum": "0.4.*",
+        "florianwolters/component-drawing-color": "0.1.*",
+        "florianwolters/component-core-stringutils": "0.3.*",
+        "florianwolters/component-core-valueobject": "0.1.*",
+        "florianwolters/component-geometry": "0.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "FlorianWolters": [
+                "src/php",
+                "src/tests/integration-tests"
+            ]
+        }
+    }
+}
