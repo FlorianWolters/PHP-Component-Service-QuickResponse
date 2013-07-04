@@ -164,7 +164,7 @@ class QrCodeParameter implements
             );
         }
 
-        $this->inputData = \urlencode($inputData);
+        $this->inputData = $inputData;
     }
 
     /**

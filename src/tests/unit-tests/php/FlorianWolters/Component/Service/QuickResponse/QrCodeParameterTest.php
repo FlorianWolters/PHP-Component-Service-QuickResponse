@@ -93,7 +93,7 @@ class QrCodeParameterTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetInputData()
     {
-        $expected = 'http%3A%2F%2Fexample.org';
+        $expected = 'http://example.org';
         $actual = $this->qrCodeParameter->getInputData();
 
         $this->assertEquals($expected, $actual);
