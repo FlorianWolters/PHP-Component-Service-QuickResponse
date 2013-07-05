@@ -26,7 +26,7 @@ class QrServerClientTest extends QuickResponseClientTestAbstract
     public function setUp()
     {
         $this->setMockBasePath(
-            __DIR__ . '/../../../../../../mocks/binary/QrServer'
+            __DIR__ . '/../../../../../../../mocks/binary/QrServer'
         );
         $this->client = $this->getServiceBuilder()->get(
             'test.qr_server'

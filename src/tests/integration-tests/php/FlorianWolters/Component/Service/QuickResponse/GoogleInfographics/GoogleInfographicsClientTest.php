@@ -26,7 +26,7 @@ class GoogleInfographicsClientTest extends QuickResponseClientTestAbstract
     public function setUp()
     {
         $this->setMockBasePath(
-            __DIR__ . '/../../../../../../mocks/binary/GoogleInfographics'
+            __DIR__ . '/../../../../../../../mocks/binary/GoogleInfographics'
         );
         $this->client = $this->getServiceBuilder()->get(
             'test.google_infographics'

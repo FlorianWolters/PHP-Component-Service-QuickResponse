@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "696455e969ef38c8a11c225994949b1a",
+    "hash": "51e0c74b7a5a56f3bdca868e7b10d8e8",
     "packages": [
         {
             "name": "florianwolters/component-core-cloneable",
